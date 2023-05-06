@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>Einsatzbericht-Generator</h1>
+    <form action="" id="main-form">
+
+        <label for="initial-report">Meldebild: </label>
+        <input type="text" name="initial-report" id="initial-report" required>
+
+        <label for="location">Einsatzort: </label>
+        <input type="location" name="location" id="location" required>
+
+        <label for="date">Datum & Uhrzeit: </label>
+        <input type="datetime-local" name="date" id="date" required>
+
+        <label for="total-crew">Eingesetzte Männer: </label>
+        <input type="number" name="total-crew" id="total-crew">
+
+        <label for="alert-type" class="center">Alarmierung: </label>
+        <div class="multi-space">
+            <span>
+                <input class="bigger" type="checkbox" name="alert-type-pager" id="alert-type-pager" required>
+                <label for="alert-type-pager">Pager</label>
+            </span>
+            <span>
+                <input class="bigger" type="checkbox" name="alert-type-siren" id="alert-type-siren" required>
+                <label for="alert-type-siren">Sirene</label>
+            </span>
+        </div>
+
+        <label class="center" for="type">Art des Einsatzes:</label>
+        <div class="multi-space">
+            <span>
+                <input class="bigger" type="radio" name="type" id="type-b" required>
+                <label for="type-b">Brandeinsatz (B)</label>
+            </span>
+            <span>
+                <input class="bigger" type="radio" name="type" id="type-t" required>
+                <label for="type-t">Technischer Einsatz (T)</label>
+            </span>
+            <span>
+                <input class="bigger" type="radio" name="type" id="type-s" required>
+                <label for="type-s">Schadstoffeinsatz (S)</label>
+            </span>
+        </div>
+
+        <label class="center" for="level">Stufe:</label>
+        <div class="multi-space">
+            <span>
+                <input class="bigger" type="radio" name="level" id="level-1" required>
+                <label for="level-1">1</label>
+            </span>
+            <span>
+                <input class="bigger" type="radio" name="level" id="level-2" required>
+                <label for="level-2">2</label>
+            </span>
+            <span>
+                <input class="bigger" type="radio" name="level" id="level-3" required>
+                <label for="level-3">3</label>
+            </span>
+            <span>
+                <input class="bigger" type="radio" name="level" id="level-4" required>
+                <label for="level-4">4</label>
+            </span>
+        </div>
+
+        <label class="center" for="vehicles">Eingesetzte Fahrzeuge:</label>
+        <div class="multi-space">
+            <input type="checkbox" name="mtf" id="mtf" required>
+            <label for="mtf">MTF</label>
+            <input type="checkbox" name="tlf" id="tlf" required>
+            <label for="tlf">TLF</label>
+            <input type="checkbox" name="rf-s" id="rf-s" required>
+            <label for="rf-s">RF-S</label>
+            <input type="checkbox" name="klf" id="klf" required>
+            <label for="klf">KLF</label>
+            <input type="checkbox" name="wlf" id="wlf" required>
+            <label for="wlf">WLF</label>
+            <input type="checkbox" name="vf" id="vf" required>
+            <label for="vf">VF</label>
+        </div>
+
+        <label class="center" for="other-crew">Andere Beteiligte: </label>
+        <textarea name="other-crew" id="other-crew" cols="30" rows="10"></textarea>
+
+        <label class="center" for="report">Einsatzbericht: </label>
+        <textarea name="report" id="report" cols="30" rows="10"></textarea>
+
+        <input id="generate-snippet" type="submit" value="Snippet generieren">
+        <input id="generate-article" type="submit" value="Artikel generieren">
+
+        <output id="output"></output>
+
+    </form>
+
+    <footer>
+        <p>&#169; 2023 by <a href="">Thomas Weichhart</a></p>
+        <!-- //link github with an icon -->
+        <a href="https://github.com/thomasw2005"><img src="https://img.icons8.com/ios-filled/50/000000/github.png"
+                alt="My Github Profile"></a>
+        <a href="https://www.instagram.com/thomas_weichhart"><img
+                src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="My Instagram Profile"></a>
+
+        <a href="https://twitter.com/WeichhartThomas"><img src="https://img.icons8.com/ios-filled/50/000000/twitter.png"
+                alt="My Twitter Profile"></a>
+
+    </footer>
+
+</body>
+
+</html>
+
+<!-- todo: focus checkboxes & radial -->
