@@ -129,6 +129,10 @@ output {
   position: relative;
 }
 
+#level-4-span {
+  display: none;
+}
+
 textarea {
   width: 100%;
   grid-column: 1/3;
