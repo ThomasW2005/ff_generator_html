@@ -81,7 +81,9 @@ document.querySelector('#main-form').addEventListener('submit', function (e) {
     </td>
 </tr>`;
 
-    document.querySelector('#output').innerText = report_html;
+    let output_element = document.querySelector('#output')
+    output_element.innerText = report_html;
+    output_element.scrollIntoView();
     navigator.clipboard.writeText(report_html)
 });
 
@@ -90,7 +92,6 @@ document.querySelector('#main-form').addEventListener('submit', function (e) {
 function at_least_one_needs_to_be_checked(checkboxes) {
     checkboxes.forEach(checkbox => {
         document.querySelector(checkbox).addEventListener('click', function () {
-            console.log("test");
             // go over all checkboxes and remove the required attribute if one is checked, else add it
             let checked = false;
             checkboxes.forEach(checkbox => {
@@ -130,7 +131,6 @@ document.querySelectorAll('.multi-space>span').forEach(span => {
 
 document.querySelectorAll('input[name="type"]').forEach(input => {
     input.addEventListener('change', function (e) {
-        console.log(e.target.value);
         if (e.target.value == "b") {
             document.querySelector('#level-4-span').style.display = "flex";
         } else {
