@@ -10,10 +10,6 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 h1 {
@@ -25,42 +21,49 @@ form {
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   gap: 20px;
-  /* min-width: 600px; */
-  width: 700px;
+  max-width: 700px;
   margin: 20px auto;
+  margin-top: 0px;
   padding: 20px;
   border: 1px solid #ccc;
   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.05);
   align-items: center;
+  border-radius: 5px;
 }
-
 @media only screen and (width < 720px) {
   form {
-    width: 100%;
     display: flex;
     flex-direction: column;
     box-shadow: none;
     border: none;
-    margin-top: 0;
   }
 }
 
 input,
-input[type=submit] {
+input[type=submit],
+.multi-space > span {
   width: 100%;
   padding: 5px;
   font-size: 1rem;
   border: 1px solid #ccc;
   transition: all 0.2s;
+  border-radius: 5px;
+}
+input:hover,
+input[type=submit]:hover,
+.multi-space > span:hover {
+  border-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+input:active,
+input[type=submit]:active,
+.multi-space > span:active {
+  border-color: rgba(0, 0, 0, 0.9);
+}
 
-  &:hover {
-    border-color: rgba(0, 0, 0, 0.4);
-  }
-
-  &:focus {
-    outline: 0;
-    border-color: rgba(0, 0, 0, 0.6);
-  }
+input[type=submit]:hover,
+.multi-space > span:hover {
+  cursor: pointer;
 }
 
 output {
@@ -82,92 +85,60 @@ output {
   grid-column: 1/3;
 }
 
-textarea {
-  grid-column: 1/3;
-  resize: vertical;
-  width: 100%;
-}
-
-footer {
-  font-size: 0.7rem;
-  text-align: center;
-  /* margin: 10px auto; */
-  border-top: 1px solid #ccc;
-  width: 100%;
-
-  margin-top: auto;
-}
-
-footer>a>img {
-  height: 2rem;
-  aspect-ratio: 1/1;
-  margin: 0.3rem 1rem;
-}
-
-/*# sourceMappingURL=style.css.map */
-
-/* this element will hold the wdth and height, using javasctip, make it fixed to top left*/
-/* .debug-info {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #fff;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  font-size: 0.8rem;
-  z-index: 1000;
-  margin: 20px;
-} */
-
 .center {
   grid-column: 1/3;
   text-align: center;
 }
 
 .multi-space {
+  width: 100%;
   grid-column: 1/3;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.multi-space>span {
+.multi-space > span {
   width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0.3rem;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.02);
 }
 
-.multi-space>span>* {
+.multi-space > span > * {
   margin: 0.3rem;
 }
 
-.multi-space>input,
-.bigger {
+.multi-space > input,
+.multi-space > span > input {
   aspect-ratio: 1/1;
   width: 1.6rem;
+  position: relative;
 }
 
-/* ===== Scrollbar CSS ===== */
-/* Firefox */
-* {
-  scrollbar-width: auto;
-  scrollbar-color: #c1c1c1 #ffffff;
+textarea {
+  width: 100%;
+  grid-column: 1/3;
+  resize: vertical;
+  border-radius: 5px;
 }
 
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 16px;
+footer {
+  font-size: 0.7rem;
+  text-align: center;
+  margin: 10px auto;
+  border-top: 1px solid #ccc;
+  width: 100%;
 }
 
-*::-webkit-scrollbar-track {
-  background: #ffffff;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #c1c1c1;
-  border-radius: 10px;
-  border: 3px solid #ffffff;
-}
+footer > a > img {
+  height: 2rem;
+  aspect-ratio: 1/1;
+  margin: 0.3rem 1rem;
+}/*# sourceMappingURL=style.css.map */

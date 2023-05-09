@@ -1,10 +1,5 @@
 document.querySelector('#main-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    
-    let submitter = e.submitter.value;
-    if (submitter == "Artikel generieren") {
-        return;
-    }
 
     // get the values from the form
     let initial_report = document.querySelector('#initial-report').value;
@@ -51,13 +46,16 @@ document.querySelector('#main-form').addEventListener('submit', function (e) {
 
     //get date in this form: ddmmyyyy
     let date_short = `${date.getDate().toString().padStart(2, '0')}${(date.getMonth() + 1).toString().padStart(2, '0')}${date.getFullYear()}`;
-
-    let report_html = `<tr border="0" cellpadding="0">
+    let date_long = date.toLocaleDateString('de-at', { weekday: "long", year: "numeric", month: "numeric", day: "numeric" });
+    let report_html = "";
+    let submitter = e.submitter.value;
+    if (submitter == "Artikel generieren") {
+        report_html = `<tr border="0" cellpadding="0">
     <td valign="middle" align="left">
         <img src="${used_type}" width="30" height="30" alt="" />
     </td>
     <td valign="middle" align="right">
-        ${date.toLocaleDateString('de-at', { weekday: "long", year: "numeric", month: "numeric", day: "numeric" })}
+        ${date_long}
     </td>
     <td valign="middle">
         <a href="https://www.ff-boeheimkirchen.at/aktuelles/aktuelle-eins%C3%A4tze/#${date_short}">${type.toUpperCase()}${level}: ${initial_report}</a>
@@ -66,7 +64,22 @@ document.querySelector('#main-form').addEventListener('submit', function (e) {
         ${location}
     </td>
 </tr>`;
+    }
 
+    report_html = `<tr border="0" cellpadding="0">
+    <td valign="middle" align="left">
+        <img src="${used_type}" width="30" height="30" alt="" />
+    </td>
+    <td valign="middle" align="right">
+        ${date_long}
+    </td>
+    <td valign="middle">
+        <a href="https://www.ff-boeheimkirchen.at/aktuelles/aktuelle-eins%C3%A4tze/#${date_short}">${type.toUpperCase()}${level}: ${initial_report}</a>
+    </td>
+    <td valign="middle">
+        ${location}
+    </td>
+</tr>`;
 
     document.querySelector('#output').innerText = report_html;
     navigator.clipboard.writeText(report_html)
@@ -77,7 +90,7 @@ document.querySelector('#main-form').addEventListener('submit', function (e) {
 function at_least_one_needs_to_be_checked(checkboxes) {
     checkboxes.forEach(checkbox => {
         document.querySelector(checkbox).addEventListener('click', function () {
-
+            console.log("test");
             // go over all checkboxes and remove the required attribute if one is checked, else add it
             let checked = false;
             checkboxes.forEach(checkbox => {
@@ -104,8 +117,24 @@ function at_least_one_needs_to_be_checked(checkboxes) {
 at_least_one_needs_to_be_checked(['#alert-type-pager', '#alert-type-siren']);
 at_least_one_needs_to_be_checked(['#mtf', '#tlf', '#rf-s', '#klf', '#wlf', '#vf']);
 
-// document.querySelector('.debug-info').innerHTML = `width: ${window.innerWidth}, height: ${window.innerHeight}`;
-// addEventListener("resize", (event) => {
-//     // update the  .debug-info with the new width and height
-//     document.querySelector('.debug-info').innerHTML = `width: ${window.innerWidth}, height: ${window.innerHeight}`;
-// });
+// makes the space around the checkboxes clickable
+document.querySelectorAll('.multi-space>span').forEach(span => {
+    span.addEventListener('click', function (e) {
+        if (e.target.tagName == "INPUT" || e.target.tagName == "LABEL") {
+            return;
+        }
+        // span.firstElementChild.checked = !span.firstElementChild.checked;
+        span.firstElementChild.click();
+    });
+});
+
+document.querySelectorAll('input[name="type"]').forEach(input => {
+    input.addEventListener('change', function (e) {
+        console.log(e.target.value);
+        if (e.target.value == "b") {
+            document.querySelector('#level-4-span').style.display = "flex";
+        } else {
+            document.querySelector('#level-4-span').style.display = "none";
+        }
+    });
+});

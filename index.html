@@ -6,15 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="style.css">
     <title>Einsatzbericht-Generator - Freiwillige Feuerwehr Böheimkirchen - Thomas Weichhart</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
-
-    <!-- <div class="debug-info">test</div>  -->
-
     <h1>Einsatzbericht-Generator</h1>
     <form id="main-form">
 
@@ -33,11 +31,11 @@
         <label for="alert-type" class="center">Alarmierung: </label>
         <div class="multi-space">
             <span>
-                <input class="bigger" value="p" type="checkbox" name="alert-type" id="alert-type-pager" required>
+                <input value="p" type="checkbox" name="alert-type" id="alert-type-pager" required>
                 <label for="alert-type-pager">Pager</label>
             </span>
             <span>
-                <input class="bigger" value="s" type="checkbox" name="alert-type" id="alert-type-siren" required>
+                <input value="s" type="checkbox" name="alert-type" id="alert-type-siren" required>
                 <label for="alert-type-siren">Sirene</label>
             </span>
         </div>
@@ -45,15 +43,15 @@
         <label class="center" for="type">Art des Einsatzes:</label>
         <div class="multi-space">
             <span>
-                <input class="bigger" value="b" type="radio" name="type" id="type-b" required>
+                <input value="b" type="radio" name="type" id="type-b" required>
                 <label for="type-b">Brandeinsatz (B)</label>
             </span>
             <span>
-                <input class="bigger" value="t" type="radio" name="type" id="type-t" required>
+                <input value="t" type="radio" name="type" id="type-t" required>
                 <label for="type-t">Technischer Einsatz (T)</label>
             </span>
             <span>
-                <input class="bigger" value="s" type="radio" name="type" id="type-s" required>
+                <input value="s" type="radio" name="type" id="type-s" required>
                 <label for="type-s">Schadstoffeinsatz (S)</label>
             </span>
         </div>
@@ -61,37 +59,49 @@
         <label class="center" for="level">Stufe:</label>
         <div class="multi-space">
             <span>
-                <input class="bigger" value="1" type="radio" name="level" id="level-1" required>
+                <input value="1" type="radio" name="level" id="level-1" required>
                 <label for="level-1">1</label>
             </span>
             <span>
-                <input class="bigger" value="2" type="radio" name="level" id="level-2" required>
+                <input value="2" type="radio" name="level" id="level-2" required>
                 <label for="level-2">2</label>
             </span>
             <span>
-                <input class="bigger" value="3" type="radio" name="level" id="level-3" required>
+                <input value="3" type="radio" name="level" id="level-3" required>
                 <label for="level-3">3</label>
             </span>
-            <span>
-                <input class="bigger" value="4" type="radio" name="level" id="level-4" required>
+            <span style="display: none;" id="level-4-span">
+                <input value="4" type="radio" name="level" id="level-4" required>
                 <label for="level-4">4</label>
             </span>
         </div>
 
         <label class="center" for="vehicles">Eingesetzte Fahrzeuge:</label>
         <div class="multi-space">
-            <input type="checkbox" value="mtf" name="vehicles" id="mtf" required>
-            <label for="mtf">MTF</label>
-            <input type="checkbox" value="tlf" name="vehicles" id="tlf" required>
-            <label for="tlf">TLF</label>
-            <input type="checkbox" value="rf-s" name="vehicles" id="rf-s" required>
-            <label for="rf-s">RF-S</label>
-            <input type="checkbox" value="klf" name="vehicles" id="klf" required>
-            <label for="klf">KLF</label>
-            <input type="checkbox" value="wlf" name="vehicles" id="wlf" required>
-            <label for="wlf">WLF</label>
-            <input type="checkbox" value="vf" name="vehicles" id="vf" required>
-            <label for="vf">VF</label>
+            <span>
+                <input type="checkbox" value="mtf" name="vehicles" id="mtf" required>
+                <label for="mtf">MTF</label>
+            </span>
+            <span>
+                <input type="checkbox" value="tlf" name="vehicles" id="tlf" required>
+                <label for="tlf">TLF</label>
+            </span>
+            <span>
+                <input type="checkbox" value="rf-s" name="vehicles" id="rf-s" required>
+                <label for="rf-s">RF-S</label>
+            </span>
+            <span>
+                <input type="checkbox" value="klf" name="vehicles" id="klf" required>
+                <label for="klf">KLF</label>
+            </span>
+            <span>
+                <input type="checkbox" value="wlf" name="vehicles" id="wlf" required>
+                <label for="wlf">WLF</label>
+            </span>
+            <span>
+                <input type="checkbox" value="vf" name="vehicles" id="vf" required>
+                <label for="vf">VF</label>
+            </span>
         </div>
 
         <label class="center" for="other-crew">Andere Beteiligte: </label>
@@ -109,7 +119,6 @@
 
     <footer>
         <p>v1.1 &#169; 2023 by <a href="">Thomas Weichhart</a></p>
-        <!-- //link github with an icon -->
         <a href="https://github.com/thomasw2005"><img src="https://img.icons8.com/ios-filled/50/000000/github.png"
                 alt="My Github Profile"></a>
         <a href="https://www.instagram.com/thomas_weichhart"><img
