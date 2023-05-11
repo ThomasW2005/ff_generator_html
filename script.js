@@ -1,65 +1,65 @@
+//--------------- data ------------------//
 let alert_type_images = {
-    'p': '<td> <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=100x10000:format=png/path/s47c677f812c00ba1/image/i0b7521ebe95b9430/version/1470063035/image.png" alt="" /> </td>',
-    's': '<td> <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=100x10000:format=png/path/s47c677f812c00ba1/image/i5946598134795bc9/version/1470069114/image.png" alt="" /> </td>'
+    p: '<td> <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=100x10000:format=png/path/s47c677f812c00ba1/image/i0b7521ebe95b9430/version/1470063035/image.png" alt="" /> </td>',
+    s: '<td> <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=100x10000:format=png/path/s47c677f812c00ba1/image/i5946598134795bc9/version/1470069114/image.png" alt="" /> </td>',
 };
 
 let type_images = {
-    'b': '<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=120x10000:format=png/path/s47c677f812c00ba1/image/i41ccc95d7b5bfbe6/version/1531755152/image.png" width="30" height="30" alt="" />',
-    't': '<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=320x10000:format=png/path/s47c677f812c00ba1/image/i26273cd4d48cb25f/version/1531755148/image.png" width="30" height="30" alt="" />',
-    's': '<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=278x10000:format=gif/path/s47c677f812c00ba1/image/i398e35b7bba28a00/version/1531755156/image.gif" width="30" height="30" alt="" />'
+    b: '<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=120x10000:format=png/path/s47c677f812c00ba1/image/i41ccc95d7b5bfbe6/version/1531755152/image.png" width="30" height="30" alt="" />',
+    t: '<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=320x10000:format=png/path/s47c677f812c00ba1/image/i26273cd4d48cb25f/version/1531755148/image.png" width="30" height="30" alt="" />',
+    s: '<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=278x10000:format=gif/path/s47c677f812c00ba1/image/i398e35b7bba28a00/version/1531755156/image.gif" width="30" height="30" alt="" />',
 };
 
 let vehicle_images = {
-    'tlf': '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/tlf-a/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=118x10000:format=png/path/s47c677f812c00ba1/image/i65e49bdd863c0ab8/version/1446024823/image.png" alt="" /></a> </td>',
-    'rf-s': '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/rf-s/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=125x10000:format=png/path/s47c677f812c00ba1/image/i02b8c065ba22cf22/version/1446024826/image.png" alt="" /></a> </td>',
-    'mtf': '<td> <a href="https://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/mtf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=110x10000:format=jpg/path/s47c677f812c00ba1/image/i2a56691932c87b5c/version/1502553907/image.jpg" alt="" /></a> </td>',
-    'vf': '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/vf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=105x10000:format=png/path/s47c677f812c00ba1/image/i2ad687b46b32d5a8/version/1446024814/image.png" alt="" /></a> </td>',
-    'klf': '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/klf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=95x10000:format=png/path/s47c677f812c00ba1/image/ia8690be94128764c/version/1446024810/image.png" alt="" /></a> </td>',
-    'wlf': '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/wlf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=118x10000:format=png/path/s47c677f812c00ba1/image/ic63cc508067c7c9b/version/1683354764/image.png" alt="" /></a> </td>'
+    tlf: '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/tlf-a/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=118x10000:format=png/path/s47c677f812c00ba1/image/i65e49bdd863c0ab8/version/1446024823/image.png" alt="" /></a> </td>',
+    "rf-s": '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/rf-s/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=125x10000:format=png/path/s47c677f812c00ba1/image/i02b8c065ba22cf22/version/1446024826/image.png" alt="" /></a> </td>',
+    mtf: '<td> <a href="https://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/mtf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=110x10000:format=jpg/path/s47c677f812c00ba1/image/i2a56691932c87b5c/version/1502553907/image.jpg" alt="" /></a> </td>',
+    vf: '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/vf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=105x10000:format=png/path/s47c677f812c00ba1/image/i2ad687b46b32d5a8/version/1446024814/image.png" alt="" /></a> </td>',
+    klf: '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/klf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=95x10000:format=png/path/s47c677f812c00ba1/image/ia8690be94128764c/version/1446024810/image.png" alt="" /></a> </td>',
+    wlf: '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/wlf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=118x10000:format=png/path/s47c677f812c00ba1/image/ic63cc508067c7c9b/version/1683354764/image.png" alt="" /></a> </td>',
 };
 
 let additional_crew = {
-    "Feuerwehren": {
-        "ausserkasten": {
-            "name": "FF Ausserkasten",
-            "link": "https://www.ff-ausserkasten.at/"
+    Feuerwehren: {
+        ausserkasten: {
+            name: "FF Ausserkasten",
+            link: "https://www.ff-ausserkasten.at/",
         },
-        "mechters": {
-            "name": "FF Mechters",
-        },
-    },
-    "BOS": {
-        "rettung": {
-            "name": "Rettung",
-        },
-        "notarzt": {
-            "name": "Notarzt",
-        },
-        "polizei": {
-            "name": "Polizei",
-            "link": "https://www.polizei.gv.at/noe/start.aspx"
+        mechters: {
+            name: "FF Mechters",
         },
     },
-    "Andere": {
-        "presse": {
-            "name": "NÖN",
-            "link": "https://www.noen.at/"
+    BOS: {
+        rettung: {
+            name: "Rettung",
         },
-
-    }
+        notarzt: {
+            name: "Notarzt",
+        },
+        polizei: {
+            name: "Polizei",
+            link: "https://www.polizei.gv.at/noe/start.aspx",
+        },
+    },
+    Andere: {
+        presse: {
+            name: "NÖN",
+            link: "https://www.noen.at/",
+        },
+    },
 };
-
-document.querySelector('#main-form').addEventListener('submit', function (e) {
+//------------------ Generates the report ------------------//
+document.querySelector("#main-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
     // get the values from the form
-    let initial_report = document.querySelector('#initial-report').value;
-    let location = document.querySelector('#location').value;
-    let date = new Date(document.querySelector('#date').value);
-    let total_crew = document.querySelector('#total-crew').value;
+    let initial_report = document.querySelector("#initial-report").value;
+    let location = document.querySelector("#location").value;
+    let date = new Date(document.querySelector("#date").value);
+    let total_crew = document.querySelector("#total-crew").value;
 
     let alert_types = [];
-    document.querySelectorAll('input[name="alert-type"]:checked').forEach(checkbox => {
+    document.querySelectorAll('input[name="alert-type"]:checked').forEach((checkbox) => {
         alert_types.push(checkbox.value);
     });
 
@@ -67,19 +67,23 @@ document.querySelector('#main-form').addEventListener('submit', function (e) {
     let level = document.querySelector('input[name="level"]:checked').value;
 
     let vehicles = [];
-    document.querySelectorAll('input[name="vehicles"]:checked').forEach(checkbox => {
+    document.querySelectorAll('input[name="vehicles"]:checked').forEach((checkbox) => {
         vehicles.push(checkbox.value);
     });
 
-    let report = document.querySelector('#report').value;
+    let report = document.querySelector("#report").value;
 
-    let other_crew_presets = document.querySelectorAll('div>select');
-    let other_crew = document.querySelector('#other-crew').value;
-
+    let other_crew_presets = document.querySelectorAll("div>select");
+    let other_crew = document.querySelector("#other-crew").value;
 
     //get date in this form: ddmmyyyy
-    let date_short = `${date.getDate().toString().padStart(2, '0')}${(date.getMonth() + 1).toString().padStart(2, '0')}${date.getFullYear()}`;
-    let date_long = date.toLocaleDateString('de-at', { weekday: "long", year: "numeric", month: "numeric", day: "numeric" });
+    let date_short = `${date.getDate().toString().padStart(2, "0")}${(date.getMonth() + 1).toString().padStart(2, "0")}${date.getFullYear()}`;
+    let date_long = date.toLocaleDateString("de-at", {
+        weekday: "long",
+        year: "numeric",
+        month: "numeric",
+        day: "numeric",
+    });
 
     let report_html = "";
     let submitter = e.submitter.value;
@@ -155,7 +159,11 @@ document.querySelector('#main-form').addEventListener('submit', function (e) {
                     <div>
                         <table cellspacing="7">
                             <tr>
-                            ${alert_types.map((alert_type) => { return alert_type_images[alert_type]; }).join("")}
+                            ${alert_types
+                                .map((alert_type) => {
+                                    return alert_type_images[alert_type];
+                                })
+                                .join("")}
                             </tr>
                         </table>
                     </div>
@@ -177,17 +185,25 @@ document.querySelector('#main-form').addEventListener('submit', function (e) {
     <div style="overflow-x:auto;">
         <table>
             <tr border="0" valign="bottom">
-                ${vehicles.map((vehicle) => { return vehicle_images[vehicle]; }).join("")}
+                ${vehicles
+                    .map((vehicle) => {
+                        return vehicle_images[vehicle];
+                    })
+                    .join("")}
             </tr>
     
             <tr>
-                ${vehicles.map((vehicle) => { return `<td align="center"><font size="+1"><strong>${vehicle.toUpperCase()}</strong></font></td>`; }).join("")}
+                ${vehicles
+                    .map((vehicle) => {
+                        return `<td align="center"><font size="+1"><strong>${vehicle.toUpperCase()}</strong></font></td>`;
+                    })
+                    .join("")}
             </tr>
         </table>
     </div>
     
     <p align="justify">
-        ${report.replaceAll('\n', '<br>')}
+        ${report.replaceAll("\n", "<br>")}
     </p>
     <br />
     <strong>Einsatzkräfte&#160;vor&#160;Ort:</strong>
@@ -197,27 +213,36 @@ document.querySelector('#main-form').addEventListener('submit', function (e) {
                 <td valign="top">
                     <ul>
                         <li>
-                            <font size="+1">FF Böheimkirchen - Markt (${vehicles.length} Fahrzeug${vehicles.length == 1 ? '' : 'e'} + ${total_crew} Mann ‑ inkl. Bereitschaft)</font>
+                            <font size="+1">FF Böheimkirchen - Markt (${vehicles.length} Fahrzeug${
+            vehicles.length == 1 ? "" : "e"
+        } + ${total_crew} Mann ‑ inkl. Bereitschaft)</font>
                         </li>
-                        ${other_crew.split('\n').map((other_crew_member) => { return `<li><font size="+1">${other_crew_member}</font></li>`; }).join("")}
-                        ${other_crew_presets.forEach((preset) => {
-            let val = preset.value;
-            if (val == "") { return; }
+                        ${[...other_crew_presets]
+                            .map((preset) => {
+                                let value = preset.value;
+                                if (value == "") {
+                                    return;
+                                }
+                                let index = preset.selectedIndex;
+                                let optgroup = preset.options[index].parentNode.label;
 
-            for (types in additional_crew) {
-                for (participant in additional_crew[types]) {
-                    if (participant == val) {
+                                let selected_crew = additional_crew[optgroup][value];
+                                let name = selected_crew.name;
+                                let link = selected_crew.link;
 
-                        if (additional_crew[types][val].hasOwnProperty('link')) {
-                            return `<li><font size="+1"><a href="${additional_crew[types][val].link}">${additional_crew[types][val].name}</a></font></li>`;
-                        } else {
-                            return `<li><font size="+1">${additional_crew[types][val].name}</font></li>`;
-                        }
-                    }
-                }
-            }
-
-        })}
+                                if (link) {
+                                    return `<li><font size="+1"><a href="${link}">${name}</a></font></li>`;
+                                } else {
+                                    return `<li><font size="+1">${name}</font></li>`;
+                                }
+                            })
+                            .join("\n")}
+        ${other_crew
+            .split("\n")
+            .map((other_crew_member) => {
+                return `<li><font size="+1">${other_crew_member}</font></li>`;
+            })
+            .join("\n")} 
                     </ul >
                 </td >
                 <td>
@@ -227,7 +252,7 @@ document.querySelector('#main-form').addEventListener('submit', function (e) {
     </div > `;
     } else {
         // generate the homepage snippet
-        report_html = `< tr border = "0" cellpadding = "0" >
+        report_html = `<tr border="0" cellpadding ="0">
     <td valign="middle" align="left">
         ${type_images[type]}
     </td>
@@ -243,90 +268,94 @@ document.querySelector('#main-form').addEventListener('submit', function (e) {
 </tr > `;
     }
 
-    let output_element = document.querySelector('#output')
+    let output_element = document.querySelector("#output");
     output_element.innerText = report_html;
     output_element.scrollIntoView();
     navigator.clipboard.writeText(report_html);
 });
 
-// there are two checkboxes '#alert-type-pager' and 'alert-type-siren'. At leas one 
+//--------------- Manages the Form hints -----------------------//
+// there are two checkboxes '#alert-type-pager' and 'alert-type-siren'. At leas one
 // of them should be checked. If one is clicked, remove the rqeuired attribute from them.
-at_least_one_needs_to_be_checked(['#alert-type-pager', '#alert-type-siren']);
-at_least_one_needs_to_be_checked(['#mtf', '#tlf', '#rf-s', '#klf', '#wlf', '#vf']);
+at_least_one_needs_to_be_checked(["#alert-type-pager", "#alert-type-siren"]);
+at_least_one_needs_to_be_checked(["#mtf", "#tlf", "#rf-s", "#klf", "#wlf", "#vf"]);
 function at_least_one_needs_to_be_checked(checkboxes) {
-    checkboxes.forEach(checkbox => {
-        document.querySelector(checkbox).addEventListener('click', function () {
+    checkboxes.forEach((checkbox) => {
+        document.querySelector(checkbox).addEventListener("click", function () {
             // go over all checkboxes and remove the required attribute if one is checked, else add it
             let checked = false;
-            checkboxes.forEach(checkbox => {
+            checkboxes.forEach((checkbox) => {
                 if (document.querySelector(checkbox).checked) {
                     checked = true;
                 }
-            }
-            );
+            });
 
             if (checked) {
-                checkboxes.forEach(checkbox => {
-                    document.querySelector(checkbox).removeAttribute('required');
+                checkboxes.forEach((checkbox) => {
+                    document.querySelector(checkbox).removeAttribute("required");
                 });
-            }
-            else {
-                checkboxes.forEach(checkbox => {
-                    document.querySelector(checkbox).setAttribute('required', '');
+            } else {
+                checkboxes.forEach((checkbox) => {
+                    document.querySelector(checkbox).setAttribute("required", "");
                 });
             }
         });
     });
 }
 
+//----------------- Manages Clickable Areas for Checkboxes/radios -----------------//
 // makes the space around the checkboxes clickable
-document.querySelectorAll('.multi-space>span').forEach(span => {
-    span.addEventListener('click', function (e) {
+document.querySelectorAll(".multi-space>span").forEach((span) => {
+    span.addEventListener("click", function (e) {
         if (e.target.tagName == "INPUT" || e.target.tagName == "LABEL") {
             return;
         }
-        // span.firstElementChild.checked = !span.firstElementChild.checked;
         span.firstElementChild.click();
     });
 });
 
+//----------------- Level 4 is only with B possible -----------------//
 // only show the level 4 when type is Brandeinsatz
-document.querySelectorAll('input[name="type"]').forEach(input => {
-    input.addEventListener('change', e => {
+document.querySelectorAll('input[name="type"]').forEach((input) => {
+    input.addEventListener("change", (e) => {
         if (e.target.value == "b") {
-            document.querySelector('#level-4-span').style.display = "flex";
+            document.querySelector("#level-4-span").style.display = "flex";
         } else {
-            document.querySelector('#level-4-span').style.display = "none";
+            document.querySelector("#level-4-span").style.display = "none";
         }
     });
 });
 
-let select_element = document.createElement('select');
+let main_selector = document.querySelector("#other-crew-list");
+
+//----------------- Manages 'Andere Beteiligte' -----------------//
+//construct the original select (input) element
+let select_element = document.createElement("select");
 select_element.name = "other-crew-selectable";
-select_element.innerHTML = `< option value = "" ></option > `;
+let empty_option = document.createElement("option");
+empty_option.value = "";
+empty_option.innerText = "";
+select_element.appendChild(empty_option);
 for (let group in additional_crew) {
-    let optgroup = document.createElement('optgroup');
+    let optgroup = document.createElement("optgroup");
+    optgroup.value = group;
     optgroup.label = group;
     for (let crew in additional_crew[group]) {
-        let option = document.createElement('option');
+        let option = document.createElement("option");
         option.value = crew;
         option.innerText = additional_crew[group][crew].name;
         optgroup.appendChild(option);
     }
     select_element.appendChild(optgroup);
 }
-
-let main_selector = document.querySelector('#other-crew-list');
-
 main_selector.appendChild(select_element);
 
-main_selector.addEventListener('change', e => {
-    if (e.target.value == "") {
-        if (document.querySelectorAll('#other-crew-list>select').length > 1) {
-            e.target.remove();
+//remove all empty ones and append a new one
+document.querySelector("#other-crew-list").addEventListener("change", (e) => {
+    document.querySelectorAll("#other-crew-list>select").forEach((e) => {
+        if (e.value == "") {
+            e.remove();
         }
-        return;
-    }
-    let new_other_crew_list = main_selector.firstElementChild.cloneNode(true);
-    main_selector.appendChild(new_other_crew_list);
+    });
+    main_selector.appendChild(select_element.cloneNode(true));
 });
