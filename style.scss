@@ -52,6 +52,7 @@ form {
 }
 
 input,
+select,
 .multi-space>span {
     width: 100%;
     padding: 5px;
@@ -148,7 +149,8 @@ output {
     position: relative;
 }
 
-#level-4-span {
+#level-4-span,
+.hidden {
     display: none;
 }
 
@@ -157,7 +159,7 @@ textarea {
     grid-column: 1 / 3;
     resize: vertical;
     border-radius: $border-radius;
-
+    border: 1px solid #ccc;
 }
 
 footer {
@@ -173,4 +175,14 @@ footer>a>img {
     height: 2rem;
     aspect-ratio: 1/1;
     margin: 0.3rem 1rem;
+}
+
+#other-crew-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    // align-items: flex-start;
+    height: 100%;
+    grid-column: 1 / 3;
+    width: 100%;
 }

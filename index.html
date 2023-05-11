@@ -28,6 +28,13 @@
         <label for="total-crew">Eingesetzte Männer: </label>
         <input type="number" name="total-crew" id="total-crew">
 
+        <label for="alert-method">Alarmierung durch: </label>
+        <select id="alert-method" name="alert-method">
+            <option style="display:none"></option>
+            <option value="f-stp">Florian St. Pölten</option>
+            <option value="mobile">Mobil</option>
+        </select>
+
         <label for="alert-type" class="center">Alarmierung: </label>
         <div class="multi-space">
             <span>
@@ -104,7 +111,15 @@
             </span>
         </div>
 
+        <!-- <label class="center" for="other-crew">Andere Beteiligte: </label>
+        <textarea name="other-crew" id="other-crew" cols="30" rows="10"></textarea> -->
+
         <label class="center" for="other-crew">Andere Beteiligte: </label>
+        <div id="other-crew-list">
+        </div>
+
+        <label class="center" for="other-crew">Zusätzliche andere Beteiligte (einen pro Zeile):
+        </label>
         <textarea name="other-crew" id="other-crew" cols="30" rows="10"></textarea>
 
         <label class="center" for="report">Einsatzbericht: </label>
