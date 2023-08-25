@@ -50,6 +50,9 @@ h4 {
     align-items: center;
     gap: 20px;
     row-gap: 0px;
+    img {
+        width: 110px;
+    }
     h4 {
         grid-row: 2;
     }

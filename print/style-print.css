@@ -40,6 +40,9 @@ h4 {
   gap: 20px;
   row-gap: 0px;
 }
+.first-infos img {
+  width: 110px;
+}
 .first-infos h4 {
   grid-row: 2;
 }
