@@ -256,6 +256,7 @@ document.querySelector("#main-form").addEventListener("submit", function (e) {
         let print = window.open("", "", "left=0,top=0,width=595,height=842,toolbar=0,scrollbars=0,status=0");
         print.document.write('<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">');
         print.document.write('<link rel="stylesheet" href="style-print.css">');
+        print.document.write(`<h1>${type.toUpperCase()}${level}: ${initial_report}</h1>`);
     } else {
         // generate the homepage snippet
         report_html = `<tr border="0" cellpadding ="0">
