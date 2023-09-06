@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Einsatzbericht-Generator - Freiwillige Feuerwehr Böheimkirchen - Thomas Weichhart</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="wysiwyg-editor-4.1.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -119,10 +120,15 @@
 
         <label class="center" for="other-crew">Zusätzliche andere Beteiligte (einen pro Zeile):
         </label>
-        <textarea name="other-crew" id="other-crew" cols="30" rows="10"></textarea>
+
+        <!-- <textarea name="other-crew" id="other-crew" cols="30" rows="10"></textarea> -->
+        <div id="addition"></div>
 
         <label class="center" for="report">Einsatzbericht: </label>
-        <textarea name="report" id="report" cols="30" rows="10"></textarea>
+
+        <!-- <textarea name="report" id="report" cols="30" rows="10"></textarea> -->
+        <div id="richtext"></div>
+
         <div class="multi-space">
             <input id="generate-snippet" type="submit" value="Snippet generieren">
             <input id="generate-article" type="submit" value="Artikel generieren">
@@ -145,6 +151,13 @@
 
     </footer>
 
+
+    <script type="text/javascript" src="wysiwyg-editor-4.1.1/js/froala_editor.pkgd.min.js"></script>
+    <script>
+
+        var editor = new FroalaEditor('#richtext');
+        var addition = new FroalaEditor('#addition');
+    </script>
 </body>
 
 </html>

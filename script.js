@@ -71,10 +71,11 @@ document.querySelector("#main-form").addEventListener("submit", function (e) {
         vehicles.push(checkbox.value);
     });
 
-    let report = document.querySelector("#report").value;
+    // let report = document.querySelector("#report").value;
 
     let other_crew_presets = document.querySelectorAll("div>select");
-    let other_crew = document.querySelector("#other-crew").value;
+    let other_crew = addition.html.get().replaceAll("<p>", "");
+    // let other_crew = document.querySelector("#other-crew").value;
 
     //get date in this form: ddmmyyyy
     let date_short = `${date.getDate().toString().padStart(2, "0")}${(date.getMonth() + 1).toString().padStart(2, "0")}${date.getFullYear()}`;
@@ -203,7 +204,8 @@ document.querySelector("#main-form").addEventListener("submit", function (e) {
     </div>
     
     <p align="justify">
-        ${report.replaceAll("\n", "<br>")}
+        ${editor.html.get()}
+        
     </p>
     <br />
     <strong>Einsatzkräfte&#160;vor&#160;Ort:</strong>
@@ -238,7 +240,7 @@ document.querySelector("#main-form").addEventListener("submit", function (e) {
                             })
                             .join("\n")}
         ${other_crew
-            .split("\n")
+            .split("</p>")
             .map((other_crew_member) => {
                 return `<li><font size="+1">${other_crew_member}</font></li>`;
             })

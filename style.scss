@@ -53,7 +53,7 @@ form {
 
 input,
 select,
-.multi-space>span {
+.multi-space > span {
     width: 100%;
     padding: 5px;
     font-size: 1rem;
@@ -64,7 +64,6 @@ select,
     &:hover {
         border-color: rgba(0, 0, 0, 0.4);
         background-color: rgba(0, 0, 0, 0.05);
-
     }
 
     &:active {
@@ -73,7 +72,7 @@ select,
 }
 
 input[type="submit"],
-.multi-space>span {
+.multi-space > span {
     &:hover {
         cursor: pointer;
     }
@@ -103,9 +102,14 @@ output {
     text-align: center;
 }
 
+#richtext,
+#addition {
+    width: 100%;
+    grid-column: 1 / 3;
+}
+
 .multi-space {
     width: 100%;
-
     grid-column: 1 / 3;
 
     // display: flex;
@@ -125,7 +129,7 @@ output {
     }
 }
 
-.multi-space>span {
+.multi-space > span {
     width: 100%;
     text-align: center;
     display: flex;
@@ -138,12 +142,12 @@ output {
     box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.02);
 }
 
-.multi-space>span>* {
-    margin: .3rem;
+.multi-space > span > * {
+    margin: 0.3rem;
 }
 
 // .multi-space>input,
-.multi-space>span>input {
+.multi-space > span > input {
     aspect-ratio: 1/1;
     width: 1.6rem;
     position: relative;
@@ -171,7 +175,7 @@ footer {
     width: 100%;
 }
 
-footer>a>img {
+footer > a > img {
     height: 2rem;
     aspect-ratio: 1/1;
     margin: 0.3rem 1rem;
