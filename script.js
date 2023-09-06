@@ -205,7 +205,7 @@ document.querySelector("#main-form").addEventListener("submit", function (e) {
     </div>
     
     <p align="justify">
-        ${editor.html.get()}
+        ${editor.html.get().slice(0, -229)}
         
     </p>
     <br />
