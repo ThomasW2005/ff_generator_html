@@ -74,7 +74,8 @@ document.querySelector("#main-form").addEventListener("submit", function (e) {
     // let report = document.querySelector("#report").value;
 
     let other_crew_presets = document.querySelectorAll("div>select");
-    let other_crew = addition.html.get().replaceAll("<p>", "");
+    let other_crew = addition.html.get().slice(0, -229).replaceAll("<p>", "");
+
     // let other_crew = document.querySelector("#other-crew").value;
 
     //get date in this form: ddmmyyyy
