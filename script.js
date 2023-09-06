@@ -1,4 +1,4 @@
-//--------------- data ------------------//
+//--------------- data -------------------//
 let alert_type_images = {
     p: '<td> <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=100x10000:format=png/path/s47c677f812c00ba1/image/i0b7521ebe95b9430/version/1470063035/image.png" alt="" /> </td>',
     s: '<td> <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=100x10000:format=png/path/s47c677f812c00ba1/image/i5946598134795bc9/version/1470069114/image.png" alt="" /> </td>',
