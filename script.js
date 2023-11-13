@@ -16,7 +16,7 @@ let vehicle_images = {
     mtf: '<td> <a href="https://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/mtf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=110x10000:format=jpg/path/s47c677f812c00ba1/image/i2a56691932c87b5c/version/1502553907/image.jpg" alt="" /></a> </td>',
     vf: '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/vf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=105x10000:format=png/path/s47c677f812c00ba1/image/i2ad687b46b32d5a8/version/1446024814/image.png" alt="" /></a> </td>',
     klf: '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/klf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=95x10000:format=png/path/s47c677f812c00ba1/image/ia8690be94128764c/version/1446024810/image.png" alt="" /></a> </td>',
-    wlf: '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/wlf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=118x10000:format=png/path/s47c677f812c00ba1/image/ic63cc508067c7c9b/version/1683354764/image.png" alt="" /></a> </td>',
+    wlf: '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/wlf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/none/path/s47c677f812c00ba1/image/i8e708ecd35554d8b/version/1699901501/image.png" alt="" /></a> </td>',
 };
 
 let additional_crew = {
