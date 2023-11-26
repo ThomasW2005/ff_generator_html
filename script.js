@@ -262,20 +262,27 @@ document.querySelector("#main-form").addEventListener("submit", function (e) {
         print.document.write(`<h1>${type.toUpperCase()}${level}: ${initial_report}</h1>`);
     } else {
         // generate the homepage snippet
-        report_html = `<tr border="0" cellpadding ="0">
-    <td valign="middle" align="left">
-        ${type_images[type]}
-    </td>
-    <td valign="middle" align="right">
-        ${date_long}
-    </td>
-    <td valign="middle">
-        <a href="https://www.ff-boeheimkirchen.at/aktuelles/aktuelle-eins%C3%A4tze/#${date_short}">${type.toUpperCase()}${level}: ${initial_report}</a>
-    </td>
-    <td valign="middle">
-        ${location}
-    </td>
-</tr > `;
+        // report_html = `<tr border="0" cellpadding ="0">
+        //                <td valign="middle" align="left">
+        //                    ${type_images[type]}
+        //                </td>
+        //                <td valign="middle" align="right">
+        //                    ${date_long}
+        //                </td>
+        //                <td valign="middle">
+        //                    <a href="https://www.ff-boeheimkirchen.at/aktuelles/aktuelle-eins%C3%A4tze/#${date_short}">${type.toUpperCase()}${level}: ${initial_report}</a>
+        //                </td>
+        //                <td valign="middle">
+        //                    ${location}
+        //                </td>
+        //                </tr > `;
+
+        report_html = `<div class="entry">
+    ${type_images[type]}
+    <p>${date_long}</p>
+    <a href="/aktuelles/aktuelle-eins%C3%A4tze/#${date_short}">${type.toUpperCase()}${level}: ${initial_report}</a>
+    <p>${location}</p>
+</div>`;
     }
 
     let output_element = document.querySelector("#output");
