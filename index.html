@@ -154,8 +154,39 @@
 
     <script type="text/javascript" src="wysiwyg-editor-4.1.1/js/froala_editor.pkgd.min.js"></script>
     <script>
-        var editor = new FroalaEditor('#richtext');
-        var addition = new FroalaEditor('#addition');
+        var editor = new FroalaEditor('#richtext', {
+            toolbarButtons: {
+                'moreText': {
+                    'buttons': ['insertLink']
+                },
+                'moreParagraph': {
+                    'buttons': []
+                },
+                'moreRich': {
+                    'buttons': []
+                },
+                'moreMisc': {
+                    'buttons': []
+                }
+            },
+        });
+
+        var addition = new FroalaEditor('#addition', {
+            toolbarButtons: {
+                'moreText': {
+                    'buttons': ['insertLink']
+                },
+                'moreParagraph': {
+                    'buttons': []
+                },
+                'moreRich': {
+                    'buttons': []
+                },
+                'moreMisc': {
+                    'buttons': []
+                }
+            },
+        });
     </script>
 </body>
 
