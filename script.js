@@ -22,11 +22,44 @@ let vehicle_images = {
 let additional_crew = {
     Feuerwehren: {
         ausserkasten: {
-            name: "FF Ausserkasten",
+            name: "Freiwillige Feuerwehr Ausserkasten-Furth",
             link: "https://www.ff-ausserkasten.at/",
         },
         mechters: {
-            name: "FF Mechters",
+            name: "Freiwillige Feuerwehr Mechters",
+            link: "https://feuerwehr.mechters.at/",
+        },
+        kirchstetten: {
+            name: "Freiwillige Feuerwehr Kirchstetten-Markt",
+            link: "https://www.ff-kirchstetten.at/",
+        },
+        pyhra: {
+            name: "Freiwillige Feuerwehr Pyhra",
+            link: "https://www.feuerwehr-pyhra.at/",
+        },
+        kasten: {
+            name: "Freiwillige Feuerwehr Kasten",
+            link: "https://ff-kasten.jimdofree.com/",
+        },
+        perersdorf: {
+            name: "Freiwillige Feuerwehr Perersdorf",
+            link: "https://www.facebook.com/p/Freiwillige-Feuerwehr-Perersdorf-100067318706752/",
+        },
+        stpstadt: {
+            name: "Freiwillige Feuerwehr St. Pölten-Stadt",
+            link: "https://www.feuerwehr-stpoelten.at/",
+        },
+        wald: {
+            name: "Freiwillige Feuerwehr Wald",
+            link: "http://www.ff-wald.com/",
+        },
+        untergrafendorf: {
+            name: "Freiwillige Feuerwehr Untergrafendorf",
+            link: "https://www.ff-untergrafendorf.at/",
+        },
+        murstetten: {
+            name: "Freiwillige Feuerwehr Murstetten",
+            link: "https://www.facebook.com/FFMurstetten/",
         },
     },
     BOS: {
@@ -38,13 +71,18 @@ let additional_crew = {
         },
         polizei: {
             name: "Polizei",
-            link: "https://www.polizei.gv.at/noe/start.aspx",
         },
     },
     Andere: {
         presse: {
             name: "NÖN",
             link: "https://www.noen.at/",
+        },
+        bauhofbhk: {
+            name: "Bauhof Böheimkirchen",
+        },
+        asfinag: {
+            name: "ASFINAG",
         },
     },
 };
@@ -288,7 +326,15 @@ document.querySelector("#main-form").addEventListener("submit", function (e) {
     let output_element = document.querySelector("#output");
     output_element.innerText = report_html;
     output_element.scrollIntoView();
-    navigator.clipboard.writeText(report_html);
+    // navigator.clipboard.writeText(report_html);
+    navigator.clipboard.writeText(report_html).then(
+        () => {
+            console.log("copied to clipboard");
+        },
+        () => {
+            alert("Fehler beim Kopieren in die Zwischenablage");
+        }
+    );
 });
 
 //--------------- Manages the Form hints -----------------------//
