@@ -10,6 +10,25 @@ html {
   box-sizing: inherit;
 }
 
+legend {
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+  margin-block: 1em;
+}
+
 body {
   background: #fff;
   color: #333;

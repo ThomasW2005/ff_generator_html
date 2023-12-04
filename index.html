@@ -35,8 +35,9 @@
             <option value="mobile">Mobil</option>
         </select>
 
-        <label for="alert-type" class="center">Alarmierung: </label>
-        <div class="multi-space">
+        <!-- <label for="alert-type" class="center">Alarmierung: </label> -->
+        <fieldset class="multi-space">
+            <legend class="center">Alarmierung:</legend>
             <span>
                 <input value="p" type="checkbox" name="alert-type" id="alert-type-pager" required>
                 <label for="alert-type-pager">Pager</label>
@@ -45,10 +46,11 @@
                 <input value="s" type="checkbox" name="alert-type" id="alert-type-siren" required>
                 <label for="alert-type-siren">Sirene</label>
             </span>
-        </div>
+        </fieldset>
 
-        <label class="center" for="type">Art des Einsatzes:</label>
-        <div class="multi-space">
+        <!-- <label class="center" for="type">Art des Einsatzes:</label> -->
+        <fieldset class="multi-space">
+            <legend class="center">Art des Einsatzes:</legend>
             <span>
                 <input value="b" type="radio" name="type" id="type-b" required>
                 <label for="type-b">Brandeinsatz (B)</label>
@@ -61,10 +63,11 @@
                 <input value="s" type="radio" name="type" id="type-s" required>
                 <label for="type-s">Schadstoffeinsatz (S)</label>
             </span>
-        </div>
+        </fieldset>
 
-        <label class="center" for="level">Stufe:</label>
-        <div class="multi-space">
+        <!-- <label class="center" for="level">Stufe:</label> -->
+        <fieldset class="multi-space">
+            <legend class="center">Stufe:</legend>
             <span>
                 <input value="1" type="radio" name="level" id="level-1" required>
                 <label for="level-1">1</label>
@@ -81,10 +84,11 @@
                 <input value="4" type="radio" name="level" id="level-4" required>
                 <label for="level-4">4</label>
             </span>
-        </div>
+        </fieldset>
 
-        <label class="center" for="vehicles">Eingesetzte Fahrzeuge:</label>
-        <div class="multi-space">
+        <!-- <label class="center" for="vehicles">Eingesetzte Fahrzeuge:</label> -->
+        <fieldset class="multi-space">
+            <legend class="center">Eingesetzte Fahrzeuge:</legend>
             <span>
                 <input type="checkbox" value="mtf" name="vehicles" id="mtf" required>
                 <label for="mtf">MTF</label>
@@ -109,22 +113,22 @@
                 <input type="checkbox" value="vf" name="vehicles" id="vf" required>
                 <label for="vf">VF</label>
             </span>
-        </div>
+        </fieldset>
 
         <!-- <label class="center" for="other-crew">Andere Beteiligte: </label>
         <textarea name="other-crew" id="other-crew" cols="30" rows="10"></textarea> -->
 
-        <label class="center" for="other-crew">Andere Beteiligte: </label>
+        <p class="center">Andere Beteiligte: </p>
         <div id="other-crew-list">
         </div>
 
-        <label class="center" for="other-crew">Zusätzliche andere Beteiligte (einen pro Zeile):
-        </label>
+        <p class="center">Zusätzliche andere Beteiligte (einen pro Zeile):
+        </p>
 
         <!-- <textarea name="other-crew" id="other-crew" cols="30" rows="10"></textarea> -->
         <div id="addition"></div>
 
-        <label class="center" for="report">Einsatzbericht: </label>
+        <p class="center">Einsatzbericht: </p>
 
         <!-- <textarea name="report" id="report" cols="30" rows="10"></textarea> -->
         <div id="richtext"></div>
@@ -140,7 +144,7 @@
     </form>
 
     <footer>
-        <p>v1.31 &#169; 2023 by <a href="">Thomas Weichhart</a></p>
+        <address>v1.31 &#169; 2023 by <a href="">Thomas Weichhart</a></address>
         <a href="https://github.com/thomasw2005"><img src="https://img.icons8.com/ios-filled/50/000000/github.png"
                 alt="My Github Profile"></a>
         <a href="https://www.instagram.com/thomas_weichhart"><img
