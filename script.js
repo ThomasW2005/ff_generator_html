@@ -200,10 +200,10 @@ document.querySelector("#main-form").addEventListener("submit", function (e) {
                         <table cellspacing="7">
                             <tr>
                             ${alert_types
-                                .map((alert_type) => {
-                                    return alert_type_images[alert_type];
-                                })
-                                .join("")}
+                .map((alert_type) => {
+                    return alert_type_images[alert_type];
+                })
+                .join("")}
                             </tr>
                         </table>
                     </div>
@@ -226,18 +226,18 @@ document.querySelector("#main-form").addEventListener("submit", function (e) {
         <table>
             <tr border="0" valign="bottom">
                 ${vehicles
-                    .map((vehicle) => {
-                        return vehicle_images[vehicle];
-                    })
-                    .join("")}
+                .map((vehicle) => {
+                    return vehicle_images[vehicle];
+                })
+                .join("")}
             </tr>
     
             <tr>
                 ${vehicles
-                    .map((vehicle) => {
-                        return `<td align="center"><font size="+1"><strong>${vehicle.toUpperCase()}</strong></font></td>`;
-                    })
-                    .join("")}
+                .map((vehicle) => {
+                    return `<td align="center"><font size="+1"><strong>${vehicle.toUpperCase()}</strong></font></td>`;
+                })
+                .join("")}
             </tr>
         </table>
     </div>
@@ -254,36 +254,35 @@ document.querySelector("#main-form").addEventListener("submit", function (e) {
                 <td valign="top">
                     <ul>
                         <li>
-                            <font size="+1">FF Böheimkirchen - Markt (${vehicles.length} Fahrzeug${
-            vehicles.length == 1 ? "" : "e"
-        } + ${total_crew} Mann ‑ inkl. Bereitschaft)</font>
+                            <font size="+1">FF Böheimkirchen - Markt (${vehicles.length} Fahrzeug${vehicles.length == 1 ? "" : "e"
+            } + ${total_crew} Mann ‑ inkl. Bereitschaft)</font>
                         </li>
                         ${[...other_crew_presets]
-                            .map((preset) => {
-                                let value = preset.value;
-                                if (value == "") {
-                                    return;
-                                }
-                                let index = preset.selectedIndex;
-                                let optgroup = preset.options[index].parentNode.label;
+                .map((preset) => {
+                    let value = preset.value;
+                    if (value == "") {
+                        return;
+                    }
+                    let index = preset.selectedIndex;
+                    let optgroup = preset.options[index].parentNode.label;
 
-                                let selected_crew = additional_crew[optgroup][value];
-                                let name = selected_crew.name;
-                                let link = selected_crew.link;
+                    let selected_crew = additional_crew[optgroup][value];
+                    let name = selected_crew.name;
+                    let link = selected_crew.link;
 
-                                if (link) {
-                                    return `<li><font size="+1"><a href="${link}">${name}</a></font></li>`;
-                                } else {
-                                    return `<li><font size="+1">${name}</font></li>`;
-                                }
-                            })
-                            .join("\n")}
+                    if (link) {
+                        return `<li><font size="+1"><a href="${link}">${name}</a></font></li>`;
+                    } else {
+                        return `<li><font size="+1">${name}</font></li>`;
+                    }
+                })
+                .join("\n")}
         ${other_crew
-            .split("</p>")
-            .map((other_crew_member) => {
-                return `<li><font size="+1">${other_crew_member}</font></li>`;
-            })
-            .join("\n")} 
+                .split("</p>")
+                .map((other_crew_member) => {
+                    return `<li><font size="+1">${other_crew_member}</font></li>`;
+                })
+                .join("\n")} 
                     </ul >
                 </td >
                 <td>
@@ -385,6 +384,13 @@ document.querySelectorAll('input[name="type"]').forEach((input) => {
             document.querySelector("#level-4-span").style.display = "flex";
         } else {
             document.querySelector("#level-4-span").style.display = "none";
+        }
+
+        if (e.target.value == "t") {
+            document.querySelector("#level-0-span").style.display = "flex";
+        }
+        else {
+            document.querySelector("#level-0-span").style.display = "none";
         }
     });
 });
