@@ -22,10 +22,28 @@
     <form id="main-form">
 
         <label for="initial-report">Meldebild: </label>
-        <input type="text" name="initial-report" id="initial-report" required>
+        <input type="text" name="initial-report" id="initial-report" list="initial-report-list" required>
+
+        <datalist id="initial-report-list">
+            <option value="Bergung PKW">
+            <option value="Verkehrsunfall - Menschenrettung">
+            <option value="Fahrzeugbrand">
+            <option value="BMA - Brand">
+            <option value="Brandverdacht">
+            <option value="Türöffnung">
+            <option value="Ladekran">
+            <option value="Technische Hilfeleistung">
+            <option value="Tierrettung">
+        </datalist>
 
         <label for="location">Einsatzort: </label>
-        <input type="text" name="location" id="location" required>
+        <input type="text" name="location" id="location" list="location-list" required>
+
+        <datalist id="location-list">
+            <option value="Böheimkirchen">
+            <option value="A1 FR Wien, km 36">
+            <option value="A1 FR Salzburg, km 53">
+        </datalist>
 
         <label for="date">Datum & Uhrzeit: </label>
         <input type="datetime-local" name="date" id="date" required>
