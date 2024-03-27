@@ -40,6 +40,12 @@ document.querySelector("#main-form").addEventListener("submit", async function (
     // let custom_crew = addition.html.get().slice(0, -229).replaceAll("<p>", "");
     let custom_crew = addition.html.get().replaceAll("<p>", "").split("</p>");
     custom_crew.forEach((crew) => {
+        if (crew == "<br>") {
+            return;
+        }
+        if (crew.includes("Froala Editor")) {
+            return;
+        }
         other_crew.push(`<font size="+1">${crew}</font>`);
     });
 
@@ -88,7 +94,7 @@ document.querySelector("#main-form").addEventListener("submit", async function (
         let print = window.open("", "", "left=0,top=0,width=595,height=842,toolbar=0,scrollbars=0,status=0");
         print.document.write('<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">');
         print.document.write('<link rel="stylesheet" href="style-print.css">');
-        print.document.write(`<h1>${type.toUpperCase()}${level}: ${initial_report}</h1>`);
+        print.document.write(`<h1>${data.type.letter}${data.type.level}: ${data.report.short}</h1>`);
     } else {
         const response = await fetch('template_snippet.hbs');
         const templateSource = await response.text();
