@@ -40,6 +40,12 @@ document.querySelector("#main-form").addEventListener("submit", async function (
     // let custom_crew = addition.html.get().slice(0, -229).replaceAll("<p>", "");
     let custom_crew = addition.html.get().replaceAll("<p>", "").split("</p>");
     custom_crew.forEach((crew) => {
+        if (crew == "<br>") {
+            return;
+        }
+        if (crew.includes("Froala Editor")) {
+            return;
+        }
         other_crew.push(`<font size="+1">${crew}</font>`);
     });
 
