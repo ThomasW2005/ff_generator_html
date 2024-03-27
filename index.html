@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Einsatzbericht-Generator - Freiwillige Feuerwehr Böheimkirchen - Thomas Weichhart</title>
+
+    <script src="handlebars.min-v4.7.8.js" defer></script>
+    <script defer src="script.js" type="module"></script>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="style.css">
-    <title>Einsatzbericht-Generator - Freiwillige Feuerwehr Böheimkirchen - Thomas Weichhart</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="wysiwyg-editor-4.1.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -51,10 +53,10 @@
         <label for="total-crew">Eingesetzte Männer: </label>
         <input type="number" name="total-crew" id="total-crew">
 
-        <label for="alert-method">Alarmierung durch: </label>
-        <select id="alert-method" name="alert-method">
-            <option value="f-stp">Florian St. Pölten</option>
-            <option value="mobile">Mobil</option>
+        <label for="alert-from">Alarmierung durch: </label>
+        <select id="alert-from" name="alert-from">
+            <option value="Florian St. Pölten">Florian St. Pölten</option>
+            <option value="Mobil">Mobil</option>
         </select>
 
         <!-- <label for="alert-type" class="center">Alarmierung: </label> -->

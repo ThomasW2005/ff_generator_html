@@ -1,122 +1,10 @@
-//--------------- data -------------------//
-let alert_type_images = {
-    p: '<td> <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=100x10000:format=png/path/s47c677f812c00ba1/image/i0b7521ebe95b9430/version/1470063035/image.png" alt="" /> </td>',
-    s: '<td> <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=100x10000:format=png/path/s47c677f812c00ba1/image/i5946598134795bc9/version/1470069114/image.png" alt="" /> </td>',
-};
+import { alert_by_images, type_images, vehicle_images, additional_crew } from "./constants.js";
 
-let type_images = {
-    b: '<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=120x10000:format=png/path/s47c677f812c00ba1/image/i41ccc95d7b5bfbe6/version/1531755152/image.png" width="30" height="30" alt="" />',
-    t: '<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=320x10000:format=png/path/s47c677f812c00ba1/image/i26273cd4d48cb25f/version/1531755148/image.png" width="30" height="30" alt="" />',
-    s: '<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=278x10000:format=gif/path/s47c677f812c00ba1/image/i398e35b7bba28a00/version/1531755156/image.gif" width="30" height="30" alt="" />',
-};
-
-let vehicle_images = {
-    tlf: '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/tlf-a/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=118x10000:format=png/path/s47c677f812c00ba1/image/i65e49bdd863c0ab8/version/1446024823/image.png" alt="" /></a> </td>',
-    "rf-s": '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/rf-s/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=125x10000:format=png/path/s47c677f812c00ba1/image/i02b8c065ba22cf22/version/1446024826/image.png" alt="" /></a> </td>',
-    mtf: '<td> <a href="https://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/mtf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=110x10000:format=jpg/path/s47c677f812c00ba1/image/i2a56691932c87b5c/version/1502553907/image.jpg" alt="" /></a> </td>',
-    vf: '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/vf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=105x10000:format=png/path/s47c677f812c00ba1/image/i2ad687b46b32d5a8/version/1446024814/image.png" alt="" /></a> </td>',
-    klf: '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/klf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/dimension=95x10000:format=png/path/s47c677f812c00ba1/image/ia8690be94128764c/version/1446024810/image.png" alt="" /></a> </td>',
-    wlf: '<td> <a href="http://www.ff-boeheimkirchen.at/%C3%BCber-uns/fuhrpark/wlf/"><img src= "https://image.jimcdn.com/app/cms/image/transf/none/path/s47c677f812c00ba1/image/i8e708ecd35554d8b/version/1699901501/image.png" alt="" /></a> </td>',
-};
-
-let additional_crew = {
-    Feuerwehren: {
-        ausserkasten: {
-            name: "Freiwillige Feuerwehr Ausserkasten-Furth",
-            link: "https://www.ff-ausserkasten.at/",
-        },
-        mechters: {
-            name: "Freiwillige Feuerwehr Mechters",
-            link: "https://feuerwehr.mechters.at/",
-        },
-        kirchstetten: {
-            name: "Freiwillige Feuerwehr Kirchstetten-Markt",
-            link: "https://www.ff-kirchstetten.at/",
-        },
-        pyhra: {
-            name: "Freiwillige Feuerwehr Pyhra",
-            link: "https://www.feuerwehr-pyhra.at/",
-        },
-        kasten: {
-            name: "Freiwillige Feuerwehr Kasten",
-            link: "https://ff-kasten.jimdofree.com/",
-        },
-        perersdorf: {
-            name: "Freiwillige Feuerwehr Perersdorf",
-            link: "https://www.facebook.com/p/Freiwillige-Feuerwehr-Perersdorf-100067318706752/",
-        },
-        stpstadt: {
-            name: "Freiwillige Feuerwehr St. Pölten-Stadt",
-            link: "https://www.feuerwehr-stpoelten.at/",
-        },
-        wald: {
-            name: "Freiwillige Feuerwehr Wald",
-            link: "http://www.ff-wald.com/",
-        },
-        untergrafendorf: {
-            name: "Freiwillige Feuerwehr Untergrafendorf",
-            link: "https://www.ff-untergrafendorf.at/",
-        },
-        murstetten: {
-            name: "Freiwillige Feuerwehr Murstetten",
-            link: "https://www.facebook.com/FFMurstetten/",
-        },
-    },
-    BOS: {
-        rettung: {
-            name: "Rettung",
-        },
-        notarzt: {
-            name: "Notarzt",
-        },
-        polizei: {
-            name: "Polizei",
-        },
-    },
-    Andere: {
-        presse: {
-            name: "NÖN",
-            link: "https://www.noen.at/",
-        },
-        bauhofbhk: {
-            name: "Bauhof Böheimkirchen",
-        },
-        asfinag: {
-            name: "ASFINAG",
-        },
-    },
-};
 //------------------ Generates the report ------------------//
-document.querySelector("#main-form").addEventListener("submit", function (e) {
+document.querySelector("#main-form").addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    // get the values from the form
-    let initial_report = document.querySelector("#initial-report").value;
-    let location = document.querySelector("#location").value;
     let date = new Date(document.querySelector("#date").value);
-    let total_crew = document.querySelector("#total-crew").value;
-
-    let alert_types = [];
-    document.querySelectorAll('input[name="alert-type"]:checked').forEach((checkbox) => {
-        alert_types.push(checkbox.value);
-    });
-
-    let type = document.querySelector('input[name="type"]:checked').value;
-    let level = document.querySelector('input[name="level"]:checked').value;
-
-    let vehicles = [];
-    document.querySelectorAll('input[name="vehicles"]:checked').forEach((checkbox) => {
-        vehicles.push(checkbox.value);
-    });
-
-    // let report = document.querySelector("#report").value;
-
-    let other_crew_presets = document.querySelectorAll("div>select");
-    let other_crew = addition.html.get().slice(0, -229).replaceAll("<p>", "");
-
-    // let other_crew = document.querySelector("#other-crew").value;
-
-    //get date in this form: ddmmyyyy
     let date_short = `${date.getDate().toString().padStart(2, "0")}${(date.getMonth() + 1).toString().padStart(2, "0")}${date.getFullYear()}`;
     let date_long = date.toLocaleDateString("de-at", {
         weekday: "long",
@@ -125,171 +13,75 @@ document.querySelector("#main-form").addEventListener("submit", function (e) {
         day: "numeric",
     });
 
+    let alert_by = Array.from(document.querySelectorAll('input[name="alert-type"]:checked')).map(checkbox => alert_by_images[checkbox.value]);
+    let vehicles = Array.from(document.querySelectorAll('input[name="vehicles"]:checked')).map(checkbox => vehicle_images[checkbox.value]);
+
+    let other_crew = []
+    let other_crew_presets = [...document.querySelectorAll("div>select")];
+    other_crew_presets.forEach(preset => {
+        let value = preset.value;
+        if (value == "") {
+            return;
+        }
+        let index = preset.selectedIndex;
+        let optgroup = preset.options[index].parentNode.label;
+
+        let selected_crew = additional_crew[optgroup][value];
+        let name = selected_crew.name;
+        let link = selected_crew.link;
+
+        if (link) {
+            other_crew.push(`<font size="+1"><a href="${link}">${name}</a></font>`);
+        } else {
+            other_crew.push(`<font size="+1">${name}</font>`);
+        }
+    });
+
+    // let custom_crew = addition.html.get().slice(0, -229).replaceAll("<p>", "");
+    let custom_crew = addition.html.get().replaceAll("<p>", "").split("</p>");
+    custom_crew.forEach((crew) => {
+        other_crew.push(`<font size="+1">${crew}</font>`);
+    });
+
+    const data = {
+        report: {
+            short: document.querySelector("#initial-report").value,
+            long: editor.html.get().slice(0, -229)
+        },
+        location: document.querySelector("#location").value,
+        date: {
+            long: date_long,
+            short: date_short,
+            time: date.toLocaleTimeString().slice(0, 5)
+        },
+        total_crew: document.querySelector("#total-crew").value,
+        alert_from: document.querySelector('#alert-from').value,
+        alert_by: alert_by,
+        type: {
+            letter: document.querySelector('input[name="type"]:checked').value.toUpperCase(),
+            image: type_images[document.querySelector('input[name="type"]:checked').value],
+            level: document.querySelector('input[name="level"]:checked').value,
+        },
+        vehicles: {
+            vehicles: vehicles,
+            length: vehicles.length,
+            maybe_e: vehicles.length == 1 ? "" : "e",
+        },
+        other: other_crew
+    };
+
     let report_html = "";
     let submitter = e.submitter.value;
+
     if (submitter == "Artikel generieren") {
-        // generate the full report
-        report_html = `<h3 id="${date_short}">
-        <font size="+1">${type.toUpperCase()}${level}: ${initial_report}</font>
-    </h3>
-    
-    <div id="fb-root">
-    </div>
-    <script type="text/javascript">
-        //<![CDATA[
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.7";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    //]]>
-    </script>
-    <div class="fb-share-button" data-href="http://www.ff-boeheimkirchen.at/aktuelles/aktuelle-einsätze/#${date_short}" data-layout="button" data-size="small" data-mobile-iframe="true">
-        <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Teilen</a>
-    </div>
-    
-    <div style="overflow-x:auto;">
-        <table cellspacing="7">
-            <tr border="0" cellpadding="0">
-                <th valign="top" align="left">
-                    Meldebild:
-                </th>
-                <td valign="top">
-                    <strong>Alarmstufe:</strong>
-                </td>
-                <td valign="top">
-                    <strong>Alarmierung&#160;durch:</strong>
-                </td>
-            </tr>
-    
-            <tr border="0" cellpadding="0">
-                <td valign="top">
-                    <font size="+1">${initial_report}</font>
-                </td>
-                <td valign="top">
-                    <font size="+1">${type.toUpperCase()}${level}</font>
-                </td>
-                <td valign="top">
-                    <font size="+1">Florian&#160;St.Pölten</font>
-                </td>
-            </tr>
-    
-            <tr border="0">
-                <td valign="top">
-                    <strong>Datum/&#160;Uhrzeit:</strong>
-                </td>
-                <td valign="top">
-                    <strong>Einsatzort:</strong>
-                </td>
-                <td valign="top">
-                    <strong>Alarmierung&#160;mit:</strong>
-                </td>
-            </tr>
-    
-            <tr border="0" cellpadding="0">
-                <td valign="top">
-                    <font size="+1">${date_long}, ${date.toLocaleTimeString().slice(0, 5)} Uhr</font>
-                </td>
-                <td valign="top">
-                    <font size="+1">${location}</font>
-                </td>
-                <td valign="top">
-                    <div>
-                        <table cellspacing="7">
-                            <tr>
-                            ${alert_types
-                .map((alert_type) => {
-                    return alert_type_images[alert_type];
-                })
-                .join("")}
-                            </tr>
-                        </table>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-    
-    <div style="overflow-x:auto;">
-        <table>
-            <tr border="0">
-                <th valign="top">
-                    Eingesetzte&#160;Fahrzeuge:
-                </th>
-            </tr>
-        </table>
-    </div>
-    
-    <div style="overflow-x:auto;">
-        <table>
-            <tr border="0" valign="bottom">
-                ${vehicles
-                .map((vehicle) => {
-                    return vehicle_images[vehicle];
-                })
-                .join("")}
-            </tr>
-    
-            <tr>
-                ${vehicles
-                .map((vehicle) => {
-                    return `<td align="center"><font size="+1"><strong>${vehicle.toUpperCase()}</strong></font></td>`;
-                })
-                .join("")}
-            </tr>
-        </table>
-    </div>
-    
-    <p align="justify">
-        ${editor.html.get().slice(0, -229)}
-        
-    </p>
-    <br />
-    <strong>Einsatzkräfte&#160;vor&#160;Ort:</strong>
-    <div style="overflow-x:auto;">
-        <table cellspacing="0">
-            <tr border="0" cellpadding="0">
-                <td valign="top">
-                    <ul>
-                        <li>
-                            <font size="+1">FF Böheimkirchen - Markt (${vehicles.length} Fahrzeug${vehicles.length == 1 ? "" : "e"
-            } + ${total_crew} Mann ‑ inkl. Bereitschaft)</font>
-                        </li>
-                        ${[...other_crew_presets]
-                .map((preset) => {
-                    let value = preset.value;
-                    if (value == "") {
-                        return;
-                    }
-                    let index = preset.selectedIndex;
-                    let optgroup = preset.options[index].parentNode.label;
 
-                    let selected_crew = additional_crew[optgroup][value];
-                    let name = selected_crew.name;
-                    let link = selected_crew.link;
+        const response = await fetch('template_report.hbs');
+        const templateSource = await response.text();
 
-                    if (link) {
-                        return `<li><font size="+1"><a href="${link}">${name}</a></font></li>`;
-                    } else {
-                        return `<li><font size="+1">${name}</font></li>`;
-                    }
-                })
-                .join("\n")}
-        ${other_crew
-                .split("</p>")
-                .map((other_crew_member) => {
-                    return `<li><font size="+1">${other_crew_member}</font></li>`;
-                })
-                .join("\n")} 
-                    </ul >
-                </td >
-                <td>
-                </td>
-            </tr >
-        </table >
-    </div > `;
+        const template = Handlebars.compile(templateSource);
+
+        report_html = template(data);
+
     } else if (submitter == "Druck generieren") {
         console.log("Druck generieren");
         // Generate the Print version
@@ -298,42 +90,19 @@ document.querySelector("#main-form").addEventListener("submit", function (e) {
         print.document.write('<link rel="stylesheet" href="style-print.css">');
         print.document.write(`<h1>${type.toUpperCase()}${level}: ${initial_report}</h1>`);
     } else {
-        // generate the homepage snippet
-        // report_html = `<tr border="0" cellpadding ="0">
-        //                <td valign="middle" align="left">
-        //                    ${type_images[type]}
-        //                </td>
-        //                <td valign="middle" align="right">
-        //                    ${date_long}
-        //                </td>
-        //                <td valign="middle">
-        //                    <a href="https://www.ff-boeheimkirchen.at/aktuelles/aktuelle-eins%C3%A4tze/#${date_short}">${type.toUpperCase()}${level}: ${initial_report}</a>
-        //                </td>
-        //                <td valign="middle">
-        //                    ${location}
-        //                </td>
-        //                </tr > `;
+        const response = await fetch('template_snippet.hbs');
+        const templateSource = await response.text();
 
-        report_html = `<div class="entry">
-    ${type_images[type]}
-    <p>${date_long}</p>
-    <a href="/aktuelles/aktuelle-eins%C3%A4tze/#${date_short}">${type.toUpperCase()}${level}: ${initial_report}</a>
-    <p>${location}</p>
-</div>`;
+        const template = Handlebars.compile(templateSource);
+
+        report_html = template(data);
     }
 
     let output_element = document.querySelector("#output");
     output_element.innerText = report_html;
     output_element.scrollIntoView();
-    // navigator.clipboard.writeText(report_html);
-    navigator.clipboard.writeText(report_html).then(
-        () => {
-            console.log("copied to clipboard");
-        },
-        () => {
-            alert("Fehler beim Kopieren in die Zwischenablage");
-        }
-    );
+
+    navigator.clipboard.writeText(report_html).then(console.log("copied to clipboard"));
 });
 
 //--------------- Manages the Form hints -----------------------//
