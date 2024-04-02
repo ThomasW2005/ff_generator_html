@@ -12,7 +12,7 @@ const type_images = {
 const vehicle_images = {
     'tlf': {
         name: {
-            short: 'TLF-A 2000',
+            short: 'TLF-A 4000',
             long: 'Tanklöschfahrzeug'
         },
         image: 'https://image.jimcdn.com/app/cms/image/transf/dimension=118x10000:format=png/path/s47c677f812c00ba1/image/i65e49bdd863c0ab8/version/1446024823/image.png',
