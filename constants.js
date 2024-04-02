@@ -102,6 +102,14 @@ const additional_crew = {
             name: "Freiwillige Feuerwehr Murstetten",
             link: "https://www.facebook.com/FFMurstetten/",
         },
+        weisching: {
+            name: "Freiwillige Feuerwehr Weisching",
+            link: "https://www.facebook.com/Weisching/?locale=de_DE",
+        },
+        kapelln: {
+            name: "Freiwillige Feuerwehr Kapelln",
+            link: "http://www.feuerwehr-kapelln.at/",
+        },
     },
     BOS: {
         rettung: {
