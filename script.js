@@ -20,6 +20,7 @@ document.querySelector("#main-form").addEventListener("submit", async function (
     let other_crew_presets = [...document.querySelectorAll("div>select")];
     other_crew_presets.forEach(preset => {
         let value = preset.value;
+        console.log(value);
         if (value == "") {
             return;
         }
@@ -29,6 +30,7 @@ document.querySelector("#main-form").addEventListener("submit", async function (
         let selected_crew = additional_crew[optgroup][value];
         let name = selected_crew.name;
         let link = selected_crew.link;
+        console.log(name, link);
 
         if (link) {
             other_crew.push(`<font size="+1"><a href="${link}">${name}</a></font>`);
@@ -40,6 +42,9 @@ document.querySelector("#main-form").addEventListener("submit", async function (
     // let custom_crew = addition.html.get().slice(0, -229).replaceAll("<p>", "");
     let custom_crew = addition.html.get().replaceAll("<p>", "").split("</p>");
     custom_crew.forEach((crew) => {
+        if (crew == "") {
+            return;
+        }
         if (crew == "<br>") {
             return;
         }
