@@ -20,7 +20,6 @@ document.querySelector("#main-form").addEventListener("submit", async function (
     let other_crew_presets = [...document.querySelectorAll("div>select")];
     other_crew_presets.forEach(preset => {
         let value = preset.value;
-        console.log(value);
         if (value == "") {
             return;
         }
@@ -100,7 +99,12 @@ document.querySelector("#main-form").addEventListener("submit", async function (
         print.document.write('<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">');
         print.document.write('<link rel="stylesheet" href="style-print.css">');
         print.document.write(`<h1>${data.type.letter}${data.type.level}: ${data.report.short}</h1>`);
-    } else {
+    } else if (submitter == "Instagram-Post") {
+        console.log("Instagram Post");
+        document.querySelector("#output").style.display = "none";
+
+    }
+    else {
         const response = await fetch('template_snippet.hbs');
         const templateSource = await response.text();
 
@@ -207,4 +211,27 @@ document.querySelector("#other-crew-list").addEventListener("change", (e) => {
         }
     });
     main_selector.appendChild(select_element.cloneNode(true));
+});
+
+//--------------- Load Example -----------------//
+document.querySelector('#load-example').addEventListener('click', () => {
+    console.log("load example");
+    document.querySelector("#initial-report").value = "Brandmeldeanlage";
+    document.querySelector("#location").value = "Bauhof";
+    document.querySelector("#date").value = "2024-09-01T22:00";
+    document.querySelector("#total-crew").value = "6";
+    document.querySelector("#alert-from").getElementsByTagName('option')[1].selected = 'selected';
+    document.querySelector("#alert-type-pager").checked = true;
+    document.querySelector("#mtf").checked = true;
+    document.querySelector("#klf").checked = true;
+    document.querySelector("#level-2").checked = true;
+    document.querySelector("#type-b").checked = true;
+    document.querySelector("#other-crew-list").value = "";
+    document.querySelector("#initial-report").value = "Brandmeldeanlage";
+    editor.html.set('Am 21. August wurden wir um 12 Uhr zu einem Einsatz Alarmiert.');
+    addition.html.set('FF Hinterwalder');
+
+    document.querySelectorAll('input').forEach((input) => {
+        input.removeAttribute("required");
+    });
 });

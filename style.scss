@@ -160,6 +160,28 @@ output {
     }
 }
 
+.buttons {
+    width: 100%;
+    grid-column: 1 / 3;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    @media only screen and (width < 450px) {
+        flex-direction: column;
+    }
+    input {
+        width: unset;
+        flex: 1;
+    
+    }
+}
+
+.full {
+    min-width: 45%;
+}
+
+
 .multi-space > span {
     width: 100%;
     text-align: center;
